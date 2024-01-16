@@ -1,7 +1,27 @@
 server:
-  port: 8001
+  port: 8001 
+  servlet:
+    context-path: /api
 
 spring: 
+    application:
+    name: product-ms
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/gestion_customer_db
+    username: postgres
+    password: Junior@2019@Ismael
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
   cloud:
     gateway:
       discovery:
