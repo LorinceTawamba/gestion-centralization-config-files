@@ -4,8 +4,6 @@ server:
     context-path: /api
 
 spring: 
-    application:
-    name: product-ms
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5433/gestion_customer_db
